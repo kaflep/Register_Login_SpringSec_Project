@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      th:replace="~{basepage::layout(~{::section})}">
+<!--basepage is basepage.html and section is which attribute want to use like, div, nav, a ,h1 and so on -->
+<!-- whatever the values stay at the section page that will dynamically pass -->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<section>
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="card">
+                    <div class="card-header text-center fs-4">Login page</div>
+                    <div class="card-body">
+                <!-- it is given in securityConfig loginProcessingUrl("/login") -->
+                        <form action="/login" method="post">
+                            <div class="mb-3">
+                                <!--  change here name="email" and name "password" it updated now -->
+                                <label>Enter Email</label><input type="text" name="username" class="form-control">
+
+                            </div>
+                            <div class="mb-3">
+                                <label>Enter Password</label><input type="text" name="password" class="form-control">
+
+                            </div>
+                            <button class="btn btn-primary col-md-12"> Login</button>
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+</body>
+</html>
